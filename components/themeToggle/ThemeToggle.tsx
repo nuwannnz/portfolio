@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
 import { LuSunMedium, LuMoon } from "react-icons/lu";
 
-const ThemeToggle = () => {
+const ThemeToggle = ({ size }: { size?: number }) => {
   const { resolvedTheme, setTheme } = useTheme();
   const [isMounted, setIsMounted] = useState<boolean>(false);
 
@@ -20,7 +20,11 @@ const ThemeToggle = () => {
     <button
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
-      {resolvedTheme === "dark" ? <LuSunMedium /> : <LuMoon />}
+      {resolvedTheme === "dark" ? (
+        <LuSunMedium size={size} />
+      ) : (
+        <LuMoon size={size} />
+      )}
     </button>
   );
 };
