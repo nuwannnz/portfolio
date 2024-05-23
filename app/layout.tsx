@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const imbPlexMono = IBM_Plex_Mono({ weight: "100", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Nuwan Karunarathna",
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={imbPlexMono.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
