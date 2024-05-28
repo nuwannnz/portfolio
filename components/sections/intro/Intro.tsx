@@ -3,6 +3,7 @@ import React from "react";
 import socialLinks from "../../../data/social.json";
 import { FaGithub, FaFacebook, FaLinkedin, FaMedium } from "react-icons/fa";
 import WORK_EXPERIENCE from "../../../data/work_experience.json";
+import INTRO_DETAILS from "../../../data/intro.json";
 
 const SOCIAL_MEDIA_LINKS: {
   key: string;
@@ -28,15 +29,9 @@ const Intro = () => {
     <Section title="intro">
       <div className="flex flex-col sm:flex-row">
         <div className="w-full sm:w-2/4">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse
-          </p>
+          <p>{INTRO_DETAILS.intro}</p>
 
-          <div className="flex flex-row gap-3 mt-6">
+          <div className="flex flex-row gap-8 sm:gap-3 mt-6 justify-center sm:justify-start">
             {SOCIAL_MEDIA_LINKS.map(({ key, link, icon }) => (
               <a key={key} href={link} target="_blank">
                 {icon}

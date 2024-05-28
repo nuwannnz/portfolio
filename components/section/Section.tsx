@@ -11,7 +11,7 @@ const Section = ({ title, children }: SectionProps) => {
         <h3>{title}</h3>
         <div className="border-t-slate-300 border-t-2 w-full"></div>
       </div>
-      <div className="ml-6 sm:ml-32 mt-4">{children}</div>
+      <div className="ml-0 sm:ml-32 mt-4">{children}</div>
     </div>
   );
 };
