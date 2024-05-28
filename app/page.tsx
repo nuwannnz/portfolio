@@ -5,7 +5,10 @@ import Intro from "@/components/sections/intro/Intro";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen w-full flex-col p-4 lg:p-16 md:p-9">
+    <main
+      id="home"
+      className="flex min-h-screen w-full flex-col p-4 lg:p-16 md:p-9"
+    >
       <Header />
       <Intro />
       <Section title="portfolio">

@@ -26,8 +26,8 @@ const SOCIAL_MEDIA_LINKS: {
 const Intro = () => {
   return (
     <Section title="intro">
-      <div className="flex flex-row">
-        <div className="w-2/4">
+      <div className="flex flex-col sm:flex-row">
+        <div className="w-full sm:w-2/4">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -45,8 +45,8 @@ const Intro = () => {
           </div>
         </div>
 
-        <div className="w-2/4 flex justify-end">
-          <div className="bg-slate-100 dark:bg-slate-800 rounded-lg py-3 px-4 w-3/4 relative bottom-4">
+        <div className="w-full sm:w-2/4 flex justify-end">
+          <div className="bg-slate-100 dark:bg-slate-800 rounded-lg py-3 px-4 mt-8 sm:mt-0 w-full sm:w-3/4 sm:relative bottom-4">
             <h4>work experience</h4>
 
             <div className="flex flex-col gap-4 mt-2">
